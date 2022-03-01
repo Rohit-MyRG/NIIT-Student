@@ -1,0 +1,38 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    /* background-image: linear-gradient(to right bottom, red, yellow); */
+}
+.container{
+    box-shadow: 0px 0px 5px 5px rgb(216, 216, 216);
+    width: 800px;
+    margin: 50px auto;
+    padding: 50px;
+}
+.container .nav{
+    list-style-type: none;
+    padding: 0px;
+    background-color: black;
+    border-radius: 50px;
+}
+.container .nav li{
+    display: inline-block;
+}
+.container .nav li a{
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+}
+.container .nav li a:hover{
+    background-color: rgb(177, 177, 177);
+    color: black;
+}
+.heading{
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 50px;
+
+}

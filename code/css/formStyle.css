@@ -1,0 +1,20 @@
+.stud-form{
+    box-shadow: 0px 0px 5px 5px rgb(221, 221, 221);
+    border-radius: 10px;
+    padding: 30px;
+    margin: auto;
+    width: 50%;
+    
+}
+.stud-form input{
+    width: 100%;
+    padding: 7px 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    
+    outline-color: red;
+}
+.stud-form input[type="submit"]{
+    background-color: rgb(75, 183, 255);
+    border: none;
+}

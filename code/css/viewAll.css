@@ -1,0 +1,8 @@
+.record-table table,
+.record-table th,
+.record-table td{
+    border: solid 1px black;
+    margin: 10px auto;
+    padding: 5px 20px;
+    border-collapse: collapse;
+}
