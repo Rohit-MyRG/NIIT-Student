@@ -6,3 +6,6 @@
     padding: 5px 20px;
     border-collapse: collapse;
 }
+.record-table th{
+    background-color: rgb(144, 203, 255);
+}

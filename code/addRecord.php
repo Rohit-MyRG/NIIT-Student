@@ -7,28 +7,30 @@
     <title>Student</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/formStyle.css">
+    <style>
+       
+    </style>
 </head>
 <body>
     <div class="container">
         <h1 class="heading" >NIIT Foundation</h1>
         <ul class="nav">
             <li> <a href="viewAll.php"> View All Records </a> </li>
-            <li> <a href="addRecord.php"> Add New Student </a> </li>
         </ul>
         <section>
-            <h1>Update student record</h1>
+            <h1>Add New Student</h1>
             <div class="stud-form">
                
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                    <input type="text" name="roll" placeholder="Roll No." value="<?php echo $_REQUEST['roll']; ?>">
-                    <input type="text" name="name" placeholder="Full Name" value="<?php echo $_REQUEST['name']; ?>">
-                    <input type="date" name="dob" value="<?php echo $_REQUEST['dob']; ?>">
-                    <input type="text" name="mobile" placeholder="Mobile" value="<?php echo $_REQUEST['mobile']; ?>">
+                    <input type="text" name="roll" placeholder="Roll No." value="">
+                    <input type="text" name="name" placeholder="Full Name" value="">
+                    <input type="date" name="dob" value="">
+                    <input type="text" maxlength="10" name="mobile" placeholder="Mobile" value="">
 
-                    <input type="submit" value="Update Record" name="update-button" >
+                    <input type="submit" value="Add Record" name="insert-button" >
                 </form>
                 <?php
-                        if(isset($_REQUEST['update-button'])){
+                        if(isset($_REQUEST['insert-button'])){
                             $host = "localhost:3306";
                             $user = "root";
                             $pass = "";
@@ -44,14 +46,14 @@
                                 die('Not Connected'.mysqli_connect_error() );
                             }
                         
-                            $sql = "update student set name = '$name' , dob = '$dob', mobile = '$mobile' where roll = $roll;";
+                            $sql = "insert into student(roll, name, dob, mobile) values($roll, '$name','$dob','$mobile');";
 
                             $result = mysqli_query($conn, $sql);
 
                             if($result){
-                                echo "<script> alert('Record Updated Succesfully'); </script>";
+                                echo "<script> alert('Record Inserted Succesfully'); </script>";
                             }else{
-                                echo " <script> alert('Sorry, does not updated...'); </script>";
+                                echo " <script> alert('Sorry, does not inserted...'); </script>";
                             }
                           
                         }
@@ -62,5 +64,4 @@
 </body>
 
 </html>
-
 

@@ -12,7 +12,7 @@
         <h1 class="heading" >NIIT Foundation</h1>
         <ul class="nav">
             <li> <a href="viewAll.php"> View All Records </a> </li>
-            <li> <a href=""> Add New Student </a> </li>
+            <li> <a href="addRecord.php"> Add New Student </a> </li>
         </ul>
         <section>
             <h1>Heading</h1>
